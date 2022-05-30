@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/details_activity_car_image_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/lamborghini_venonan"
+            android:contentDescription="Image of the product"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Name"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:textColor="@color/orange"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?android:textAppearanceSmall"/>
+
+            <EditText
+                android:id="@+id/car_name_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:fontFamily="sans-serif-light"
+                android:hint="Product Name"
+                android:inputType="textCapWords"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Supplier"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:textColor="@color/orange"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?android:textAppearanceSmall"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/supplier_name_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Supplier Name"
+                    android:inputType="textCapWords"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/supplier_email_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Supplier E-mail"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:fontFamily="sans-serif-medium"
+                android:paddingTop="16dp"
+                android:text="Price"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/orange" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/price_editText"
+                    android:hint="Price"
+                    android:paddingStart="12dp"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+                <TextView
+                    android:text="$"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:fontFamily="sans-serif-medium"
+                android:paddingTop="20dp"
+                android:text="Stock"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/orange" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/decrement_button_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:onClick="decrementStock"
+                    android:src="@drawable/baseline_remove_circle_outline_black_24" />
+
+                <EditText
+                    android:id="@+id/stock_available"
+                    android:inputType="number"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="16dp"
+                    android:text="0"
+                    android:lines="1"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+                <ImageView
+                    android:id="@+id/increment_button_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:onClick="incrementStock"
+                    android:src="@drawable/baseline_add_circle_outline_black_24" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <Button
+                android:id="@+id/order_more_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
+                android:gravity="center"
+                android:text="Order More"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+

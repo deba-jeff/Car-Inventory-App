@@ -1,0 +1,13 @@
+<resources>
+    <!-- App name -->
+    <string name="app_name">Car Inventory App</string>
+
+    <string name="details_activity_edit_car">Edit Car</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_insert_dummy_data">Insert dummy Data</string>
+    <string name="action_delete_all_cars">Delete All Cars</string>
+    <string name="details_insert_car_successful">Car saved</string>
+    <string name="details_insert_car_failed">Error with saving car</string>
+
+</resources>
